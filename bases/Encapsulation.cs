@@ -140,8 +140,8 @@ public class EncapsulationDemo : DemoMaker
         AnimalEncapsulation animal = new AnimalEncapsulation("Jane", 38, 2);
 
         Console.WriteLine($"L'animal a {animal.getAge()} ans.");
-        Console.Write("Nouvel âge de l'animal : ");
 
+        Console.Write("Nouvel âge de l'animal : ");
         animal.setAge(Convert.ToDouble(Console.ReadLine()));
         //animal.age = 32;
         Console.WriteLine($"L'animal a {animal.getAge()} ans.");
@@ -150,8 +150,8 @@ public class EncapsulationDemo : DemoMaker
         OursEncapsulation ours = new OursEncapsulation("Teddy", 4, 4, "brun");
 
         Console.WriteLine($"C'est un ours {ours.getCouleur()}.");
-        Console.Write("Nouvelle couleur de l'ours : ");
 
+        Console.Write("Nouvelle couleur de l'ours : ");
         ours.setCouleur(Console.ReadLine());
         Console.WriteLine($"C'est un ours {ours.getCouleur()}.");
 
