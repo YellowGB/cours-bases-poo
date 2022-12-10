@@ -4,27 +4,27 @@ namespace Cours.Bases.Classes;
 public class Oiseau
 {
     // Propriétés
-    private string couleur;
-    private int plumes;
+    private string _couleur;
+    private int _plumes;
 
     // Constructeur
     public Oiseau(string couleur, int plumes)
     {
-        this.couleur = couleur;
-        this.plumes = plumes;
+        this._couleur = couleur;
+        this._plumes = plumes;
     }
 
     // Méthode
-    public void voler()
+    public void Voler()
     {
-        Console.WriteLine($"L'oiseau {this.couleur} à {this.plumes} plumes vole.");
+        Console.WriteLine($"L'oiseau {this._couleur} à {this._plumes} plumes vole.");
     }
 }
 
 public class Chat
 {
     // Une méthode statique ne nécessite pas d'instance pour être exécutée
-    public static void info()
+    public static void Info()
     {
         Console.WriteLine("Un chat est toujours mignon !");
     }

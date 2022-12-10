@@ -5,42 +5,42 @@ using Engine;
 // Class parent
 public class AnimalHeritage
 {
-    public string nom;
-    public double age;
-    public byte nbPattes;
+    public string Nom;
+    public double Age;
+    public byte NbPattes;
 
     public AnimalHeritage(string nom, double age, byte nbPattes)
     {
         // Le mot-clé "this" fait référence à l'instance (l'objet courant)
-        this.nom = nom;
-        this.age = age;
-        this.nbPattes = nbPattes;
+        this.Nom = nom;
+        this.Age = age;
+        this.NbPattes = nbPattes;
     }
 
-    public void dormir()
+    public void Dormir()
     {
-        Console.WriteLine($"{this.nom} dort.");
+        Console.WriteLine($"{this.Nom} dort.");
     }
 }
 
 // Enfant 1
 public class OursHeritage : AnimalHeritage
 {
-    public string couleur;
+    public string Couleur;
 
     // Surcharge du constructeur
     public OursHeritage(string nom, double age, byte nbPattes, string couleur) : base(nom, age, nbPattes)
     {
-        this.couleur = couleur;
+        this.Couleur = couleur;
     }
 
     // Méthodes supplémentaires
-    public void griffer()
+    public void Griffer()
     {
         Console.WriteLine("L'ours griffe.");
     }
 
-    public void mangerMiel(uint nbPots)
+    public void MangerMiel(uint nbPots)
     {
         Console.WriteLine($"L'ours mange {nbPots} pots de miel.");
     }
@@ -53,32 +53,32 @@ public class FlamantRoseHeritage : AnimalHeritage
     public FlamantRoseHeritage(string nom, double age, byte nbPattes) : base(nom, age, nbPattes) {}
 
     // Redéfinition : cache la méthode originelle et la remplace
-    new public void dormir()
+    new public void Dormir()
     {
-        Console.WriteLine($"Le flamant rose de {this.age} ans essaie de dormir.");
+        Console.WriteLine($"Le flamant rose de {this.Age} ans essaie de Dormir.");
     }
 
     // Méthode supplémentaire
-    public void voler()
+    public void Voler()
     {
         Console.WriteLine("Le flamant rose s'envole.");
     }
 }
 
-public class HeritageDemo : DemoMaker
+public class HeritageDemo : IDemoMaker
 {
-    public void run()
+    public void Run()
     {
         AnimalHeritage animal = new AnimalHeritage("Jane", 38, 2);
-        animal.dormir();
+        animal.Dormir();
 
         OursHeritage ours = new OursHeritage("Teddy", 4, 4, "brun");
-        ours.griffer();
-        ours.mangerMiel(3);
-        ours.dormir();
+        ours.Griffer();
+        ours.MangerMiel(3);
+        ours.Dormir();
 
         FlamantRoseHeritage flamantRose = new FlamantRoseHeritage("Fifi", 12, 2);
-        flamantRose.voler();
-        flamantRose.dormir();
+        flamantRose.Voler();
+        flamantRose.Dormir();
     }
 }

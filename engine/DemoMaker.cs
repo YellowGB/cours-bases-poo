@@ -1,6 +1,6 @@
 namespace Cours.Engine;
 
-public interface DemoMaker
+public interface IDemoMaker
 {
-    void run();
+    void Run();
 }
