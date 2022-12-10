@@ -13,6 +13,8 @@ public class ObjetDemo : IDemoMaker
         // Appel de la méthode "voler" de la classe Oiseau instanciée
         exempleOiseau.Voler();
 
+        Console.WriteLine("---");
+
         // Appel d'une méthode statique ne nécessitant pas d'instanciation
         Chat.Info();
     }

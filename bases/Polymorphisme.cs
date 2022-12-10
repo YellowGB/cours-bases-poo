@@ -77,6 +77,15 @@ public class FlamantRosePolymorphisme : AnimalPolymorphisme
     {
         Console.WriteLine($"Le flamant rose de {this.Age} ans essaie de dormir.");
     }
+
+    // Ecrasement/override de la méthode "Courir"
+    public override void Courir()
+    {
+        // Exécution de la méthode "courir" originelle telle que définie dans la classe "Animal"
+        base.Courir();
+        // Exécution supplémnetaire propre à la classe "FlamantRose"
+        Console.WriteLine("Il ne court pas très vite.");
+    }
 }
 
 public class PolymorphismeDemo : IDemoMaker
@@ -91,9 +100,13 @@ public class PolymorphismeDemo : IDemoMaker
         ours.Dormir();
         flamantRose.Dormir();
 
+        Console.WriteLine("---");
+
         animal.Courir();
         ours.Courir();
         flamantRose.Courir();
+
+        Console.WriteLine("---");
 
         ours.Manger();
         ours.Manger(3);

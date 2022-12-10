@@ -147,6 +147,8 @@ public class EncapsulationDemo : IDemoMaker
         Console.WriteLine($"L'animal a {animal.GetAge()} ans.");
         //animal.IsOld();
 
+        Console.WriteLine("---");
+
         OursEncapsulation ours = new OursEncapsulation("Teddy", 4, 4, "brun");
 
         Console.WriteLine($"C'est un ours {ours.GetCouleur()}.");
@@ -154,6 +156,8 @@ public class EncapsulationDemo : IDemoMaker
         Console.Write("Nouvelle couleur de l'ours : ");
         ours.SetCouleur(Console.ReadLine());
         Console.WriteLine($"C'est un ours {ours.GetCouleur()}.");
+
+        Console.WriteLine("---");
 
         FlamantRoseEncapsulation flamantRose = new FlamantRoseEncapsulation("Fifi", 12, 2);
         flamantRose.CheckAge();
