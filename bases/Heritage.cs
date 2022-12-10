@@ -52,12 +52,6 @@ public class FlamantRoseHeritage : AnimalHeritage
     // Reprise du construteur du parent
     public FlamantRoseHeritage(string nom, double age, byte nbPattes) : base(nom, age, nbPattes) {}
 
-    // Redéfinition : cache la méthode originelle et la remplace
-    new public void Dormir()
-    {
-        Console.WriteLine($"Le flamant rose de {this.Age} ans essaie de Dormir.");
-    }
-
     // Méthode supplémentaire
     public void Voler()
     {
