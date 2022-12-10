@@ -17,7 +17,7 @@ public class AnimalEncapsulation
         this.nbPattes = nbPattes;
     }
 
-    // Setters permettant de contrôler l'implémentation des propriétés
+    // Setters/mutateurs permettant de contrôler l'implémentation des propriétés
     public void setNom(string nom)
     {
         this.nom = nom;
@@ -43,7 +43,7 @@ public class AnimalEncapsulation
         this.nbPattes = nbPattes;
     }
 
-    // Getters permettant d'accéder aux propriétés de manière contrôlée
+    // Getters/accesseurs permettant d'accéder aux propriétés de manière contrôlée
     public string getNom()
     {
         return this.nom;
