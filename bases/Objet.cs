@@ -12,5 +12,8 @@ public class ObjetDemo : DemoMaker
         Oiseau exempleOiseau = new Oiseau("bleu", 22);
         // Appel de la méthode "voler" de la classe Oiseau instanciée
         exempleOiseau.voler();
+
+        // Appel d'une méthode statique ne nécessitant pas d'instanciation
+        Chat.info();
     }
 }

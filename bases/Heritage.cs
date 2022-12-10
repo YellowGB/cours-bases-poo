@@ -3,32 +3,33 @@ namespace Cours.Bases;
 using Engine;
 
 // Class parent
-public class Animal
+public class AnimalHeritage
 {
-    protected string name;
-    protected double age;
-    protected byte nbPattes;
+    public string nom;
+    public double age;
+    public byte nbPattes;
 
-    public Animal(string name, double age, byte nbPattes)
+    public AnimalHeritage(string nom, double age, byte nbPattes)
     {
-        this.name = name;
+        // Le mot-clé "this" fait référence à l'instance (l'objet courant)
+        this.nom = nom;
         this.age = age;
         this.nbPattes = nbPattes;
     }
 
     public void dormir()
     {
-        Console.WriteLine($"{this.name} dort.");
+        Console.WriteLine($"{this.nom} dort.");
     }
 }
 
 // Enfant 1
-public class Ours : Animal
+public class OursHeritage : AnimalHeritage
 {
-    private string couleur;
+    public string couleur;
 
     // Surcharge du constructeur
-    public Ours(string name, double age, byte nbPattes, string couleur) : base(name, age, nbPattes)
+    public OursHeritage(string nom, double age, byte nbPattes, string couleur) : base(nom, age, nbPattes)
     {
         this.couleur = couleur;
     }
@@ -46,10 +47,10 @@ public class Ours : Animal
 }
 
 // Enfant 2
-public class FlamantRose : Animal
+public class FlamantRoseHeritage : AnimalHeritage
 {
     // Reprise du construteur du parent
-    public FlamantRose(string name, double age, byte nbPattes) : base(name, age, nbPattes) {}
+    public FlamantRoseHeritage(string nom, double age, byte nbPattes) : base(nom, age, nbPattes) {}
 
     // Cache la méthode originelle et la remplace
     new public void dormir()
@@ -68,15 +69,15 @@ public class HeritageDemo : DemoMaker
 {
     public void run()
     {
-        Animal animal = new Animal("Jane", 38, 2);
+        AnimalHeritage animal = new AnimalHeritage("Jane", 38, 2);
         animal.dormir();
 
-        Ours ours = new Ours("Teddy", 4, 4, "brun");
+        OursHeritage ours = new OursHeritage("Teddy", 4, 4, "brun");
         ours.griffer();
         ours.mangerMiel(3);
         ours.dormir();
 
-        FlamantRose flamantRose = new FlamantRose("Fifi", 12, 2);
+        FlamantRoseHeritage flamantRose = new FlamantRoseHeritage("Fifi", 12, 2);
         flamantRose.voler();
         flamantRose.dormir();
     }
