@@ -38,14 +38,14 @@ public sealed class Gouvernement
     // Définition d'une logique métier
     public void NommerMinistreJustice(string? nom)
     {
-        // _instance._ministreJustice = nom ?? "Poste vacant";
+        _instance._ministreJustice = nom ?? "Poste vacant";
 
         this.InfoMinistreJustice();
     }
 
     public void InfoMinistreJustice()
     {
-        // Console.WriteLine($"Ministre de la Justice : {_instance._ministreJustice}");
+        Console.WriteLine($"Ministre de la Justice : {_instance._ministreJustice}");
     }
 }
 
