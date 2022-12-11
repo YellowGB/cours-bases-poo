@@ -100,13 +100,13 @@ public class PolymorphismeDemo : IDemoMaker
         ours.Dormir();
         flamantRose.Dormir();
 
-        Console.WriteLine("---");
+        Helpers.ConsoleSeparator();
 
         animal.Courir();
         ours.Courir();
         flamantRose.Courir();
 
-        Console.WriteLine("---");
+        Helpers.ConsoleSeparator();
 
         ours.Manger();
         ours.Manger(3);

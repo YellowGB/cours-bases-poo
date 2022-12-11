@@ -66,14 +66,14 @@ public class HeritageDemo : IDemoMaker
         AnimalHeritage animal = new AnimalHeritage("Jane", 38, 2);
         animal.Dormir();
 
-        Console.WriteLine("---");
+        Helpers.ConsoleSeparator();
 
         OursHeritage ours = new OursHeritage("Teddy", 4, 4, "brun");
         ours.Griffer();
         ours.MangerMiel(3);
         ours.Dormir();
 
-        Console.WriteLine("---");
+        Helpers.ConsoleSeparator();
 
         FlamantRoseHeritage flamantRose = new FlamantRoseHeritage("Fifi", 12, 2);
         flamantRose.Voler();
