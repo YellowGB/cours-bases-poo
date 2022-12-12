@@ -83,7 +83,7 @@ public class FlamantRosePolymorphisme : AnimalPolymorphisme
     {
         // Exécution de la méthode "courir" originelle telle que définie dans la classe "Animal"
         base.Courir();
-        // Exécution supplémnetaire propre à la classe "FlamantRose"
+        // Exécution supplémentaire propre à la classe "FlamantRose"
         Console.WriteLine("Il ne court pas très vite.");
     }
 }
