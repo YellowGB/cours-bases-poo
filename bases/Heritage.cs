@@ -11,7 +11,6 @@ public class AnimalHeritage
 
     public AnimalHeritage(string nom, double age, byte nbPattes)
     {
-        // Le mot-clé "this" fait référence à l'instance (l'objet courant)
         this.Nom = nom;
         this.Age = age;
         this.NbPattes = nbPattes;

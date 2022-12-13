@@ -10,6 +10,7 @@ public class Oiseau
     // Constructeur
     public Oiseau(string couleur, int plumes)
     {
+        // Le mot-clé "this" fait référence à l'instance (l'objet courant)
         this._couleur = couleur;
         this._plumes = plumes;
     }
